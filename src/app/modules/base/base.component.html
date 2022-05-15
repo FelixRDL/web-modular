@@ -1,0 +1,22 @@
+<div class="" style="position: relative">
+  <svg
+    attr.width="{{ 5.08 * width * zoom }}px"
+    attr.height="{{ 128.5 * height * zoom }}px"
+  >
+    <g>
+      <rect
+        x="0"
+        y="0"
+        attr.width="{{ 5.08 * width * zoom }}px"
+        attr.height="{{ 128.5 * height * zoom }}px"
+        attr.fill="{{ color }}"
+        stroke="darkgrey"
+        attr.stroke-width="{{ zoom * 1 }}"
+      />
+    </g>
+  </svg>
+
+  <div style="position: absolute; top: 0; left: 0; padding: 0.5em">
+    <ng-content></ng-content>
+  </div>
+</div>
