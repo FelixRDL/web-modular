@@ -1,5 +1,5 @@
-<svg class="h-screen w-screen absolute">
+<svg class="h-screen w-screen absolute" style="pointer-events: none;">
     <g>  
-        <path attr.d="M{{pStart}} L{{pEnd}}" stroke-width="5px" stroke="blue" fill="transparent"/>
+        <path attr.d="M{{pStart}} L{{pEnd}}" stroke-width="5px" stroke="blue" fill="transparent" (click)="click();"/>
     </g>
 </svg>

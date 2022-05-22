@@ -1,24 +1,25 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { AudioService } from 'src/app/modules/audio.service';
 import { Module } from 'src/app/modules/entities/module';
-import { OscillatorDspService } from './oscillator-dsp.service';
+import { OscillatorDspService } from '../oscillator/oscillator-dsp.service';
+import { MixerDspService } from './mixer-dsp.service';
 
 @Component({
-  selector: 'app-oscillator',
-  templateUrl: './oscillator.component.html',
-  styleUrls: ['./oscillator.component.scss'],
+  selector: 'app-mixer',
+  templateUrl: './mixer.component.html',
+  styleUrls: ['./mixer.component.scss'],
   providers: [
-    OscillatorDspService
+    MixerDspService
   ]
 })
-export class OscillatorComponent implements OnInit {
+export class MixerComponent implements OnInit {
 
   @Input()
   model?: Module;
 
   constructor(
     private audio: AudioService,
-    private dsp: OscillatorDspService
+    private dsp: MixerDspService
   ) { }
 
   ngOnInit(): void {
@@ -26,17 +27,12 @@ export class OscillatorComponent implements OnInit {
       return
     this.model.sockets[0].node = this.dsp.getNode();
 
-    this.control();
-  }
-
-  control(): any {
-    if(this.model?.data.frequency) {
-      this.dsp.setFrequency(this.model?.data.frequency);
-    }
+    this.model.sockets.forEach(s => {
+      s.node = this.dsp.getNode();
+    })
   }
 
   getNode(): any {
     return this.dsp.getNode();
   }
-
 }

@@ -1,12 +1,23 @@
-<div style="display: flex; flex-direction: row">
-  <div *ngFor="let module of modules">
-    <app-oscillator [model]="module" *ngIf="module.component === 'app-oscillator'"></app-oscillator>
-  </div>
+  <div style="display: flex; flex-direction: row">
+    <div *ngFor="let module of modules">
+      <app-oscillator
+        [model]="module"
+        *ngIf="module.component === 'app-oscillator'"
+      ></app-oscillator>
+      <app-output
+        [model]="module"
+        *ngIf="module.component === 'app-output'"
+      ></app-output>
+      <app-mixer
+        [model]="module"
+        *ngIf="module.component === 'app-mixer'"
+      ></app-mixer>
+    </div>
 
-
-  <div *ngIf="(registry|async) as reg" class="absolute">
-    <div *ngFor="let wire of wires">
-      <app-wire [model]="wire"></app-wire>
+    <div *ngIf="registry | async as reg" class="absolute">
+      <div *ngFor="let wire of wires">
+        <app-wire [model]="wire"></app-wire>
+      </div>
     </div>
   </div>
-</div>
+

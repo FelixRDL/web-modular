@@ -37,4 +37,8 @@ export class WireComponent implements OnInit {
     this.pEnd = `${endPos?.left + endPos.width/2} ${endPos?.top + endPos.height/2}`;
   }
 
+  click(): void {
+    return;
+  }
+
 }

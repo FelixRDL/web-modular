@@ -11,4 +11,5 @@ export interface Socket {
     moduleId: string;
     name: string;
     el?: ElementRef;
+    node?: any;
 }

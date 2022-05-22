@@ -34,6 +34,7 @@ export class SocketComponent implements OnInit, AfterViewInit {
   }
 
   public click() {
+    console.log("X");
     this.registryService.bus.next({
       issuedBy: this.id,
       payload: this.model,
