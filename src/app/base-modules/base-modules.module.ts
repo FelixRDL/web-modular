@@ -6,6 +6,7 @@ import { OutputComponent } from './output/output.component';
 import { RegistryService } from '../modules/registry.service';
 import { AudioService } from '../modules/audio.service';
 import { MixerComponent } from './mixer/mixer.component';
+import { MicrophoneComponent } from './microphone/microphone.component';
 
 
 
@@ -13,7 +14,8 @@ import { MixerComponent } from './mixer/mixer.component';
   declarations: [
     OscillatorComponent,
     OutputComponent,
-    MixerComponent
+    MixerComponent,
+    MicrophoneComponent
   ],
   imports: [
     CommonModule,
@@ -22,7 +24,8 @@ import { MixerComponent } from './mixer/mixer.component';
   exports: [
     OscillatorComponent,
     OutputComponent,
-    MixerComponent
+    MixerComponent,
+    MicrophoneComponent
   ],
   providers: [
     RegistryService,

@@ -68,6 +68,20 @@ export class AppComponent {
     },
     {
       id: uuid(),
+      component: 'app-microphone',
+      sockets: [
+        {
+          id: uuid(),
+          moduleId: 'asdasd',
+          type: SocketType.Output,
+          name: 'OUT',
+        },
+      ],
+      data: {
+      }
+    },
+    {
+      id: uuid(),
       component: 'app-mixer',
       sockets: [
         {

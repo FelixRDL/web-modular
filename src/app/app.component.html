@@ -12,6 +12,10 @@
         [model]="module"
         *ngIf="module.component === 'app-mixer'"
       ></app-mixer>
+      <app-microphone
+        [model]="module"
+        *ngIf="module.component === 'app-microphone'"
+      ></app-microphone>
     </div>
 
     <div *ngIf="registry | async as reg" class="absolute">
