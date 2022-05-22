@@ -4,6 +4,7 @@ import { BaseComponent } from './base/base.component';
 import { SocketComponent } from './socket/socket.component';
 import { WireComponent } from './wire/wire.component';
 import { RegistryService } from './registry.service';
+import { KnobComponent } from './knob/knob.component';
 
 
 
@@ -11,7 +12,8 @@ import { RegistryService } from './registry.service';
   declarations: [
     BaseComponent,
     SocketComponent,
-    WireComponent
+    WireComponent,
+    KnobComponent
   ],
   imports: [
     CommonModule
@@ -19,7 +21,8 @@ import { RegistryService } from './registry.service';
   exports: [
     BaseComponent,
     SocketComponent,
-    WireComponent
+    WireComponent,
+    KnobComponent
   ],
   providers: [
     RegistryService

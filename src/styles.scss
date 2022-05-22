@@ -6,3 +6,25 @@ html {
     background-color: black;
     font-family: sans-serif;
 }
+
+app-knob{
+    background-size:contain;
+    margin-left: 20px;
+    width:100px;
+    height:100px;
+    display:block;
+}
+
+app-knob.skin0{
+    background:url('assets/skins/skin1_back.svg');
+   background-size: contain;    
+   width:120px;
+   height:120px;
+}
+
+app-knob.skin0 .knob{
+    background:url('assets/skins/skin1_front.svg');
+    background-size: contain;    
+    width:120px;
+    height:120px;
+}

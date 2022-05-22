@@ -3,3 +3,6 @@ Hello-World project for WebAudio, recreating a modular simulator with angular2, 
 
 ## Init and run
 Simply run `npm install; ng serve;`.
+
+## Kudos
+To github user spheras, the html-knob implementation uses code from his library, as well as his knob-skins [Knob](https://github.com/spheras/knob)

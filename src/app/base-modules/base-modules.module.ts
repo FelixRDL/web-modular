@@ -7,7 +7,8 @@ import { RegistryService } from '../modules/registry.service';
 import { AudioService } from '../modules/audio.service';
 import { MixerComponent } from './mixer/mixer.component';
 import { MicrophoneComponent } from './microphone/microphone.component';
-
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +20,9 @@ import { MicrophoneComponent } from './microphone/microphone.component';
   ],
   imports: [
     CommonModule,
-    ModulesModule
+    ModulesModule,
+    BrowserModule,
+    FormsModule
   ],
   exports: [
     OscillatorComponent,
