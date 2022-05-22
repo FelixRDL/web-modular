@@ -1,6 +1,11 @@
 <app-base>
     <div class="mb-4">OSCILLATOR</div>
-    <app-knob class="skin0" #myknob1 [min]="10" [max]="200" [value]="80" [startDegree]="200"  [endDegree]="120">
+    <app-knob class="skin0" #myknob1 
+        [min]="10.0" 
+        [max]="880.0" 
+        [value]="440" 
+        [startDegree]="200"  [endDegree]="120"
+        (change)="setFrequency($event);">
 
     </app-knob>
     <div *ngFor="let socket of model?.sockets">
